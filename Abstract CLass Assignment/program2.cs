@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using System;
 
 namespace Abstract_CLass_Assignment
 {
@@ -12,8 +6,14 @@ namespace Abstract_CLass_Assignment
     {
         static void Main(string[] args)
         {
-            Employee Sam = new Employee() { firstName = "sample", lastName = "student" };
-            Sam.SayName();
+            // Instantiate an Employee object and set first and last names
+            Employee Sam = new Employee() { firstName = "Sample", lastName = "Student" };
+
+            // Use polymorphism to create an object of type IQuittable and call Quit() on it
+            IQuittable quittableEmployee = Sam;
+
+            // Call the Quit method through the IQuittable reference
+            quittableEmployee.Quit();
             Console.ReadLine();
         }
     }
